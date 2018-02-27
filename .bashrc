@@ -90,3 +90,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+#####
+# Now for more of my personal configuration changes.
+
+export PATH="$HOME/bin:$PATH"
+
+if [ -d "$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu" ]; then
+	export PATH="$PATH:$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin:$HOME/.cargo/bin"
+fi
